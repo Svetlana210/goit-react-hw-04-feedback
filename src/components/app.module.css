@@ -1,0 +1,11 @@
+body {
+  background-color: rgba(244, 246, 246, 0.852);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 600px;
+  align-items: center;
+  color: #1f1b51;
+}
