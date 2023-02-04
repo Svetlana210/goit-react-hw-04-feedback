@@ -14,8 +14,9 @@ const App = () => {
     });
   };
 
-  const total = state.good + state.neutral + state.bad;
-  const positivePercent = Number(((state.good / total) * 100).toFixed(2));
+  const { good, neutral, bad } = state;
+  const total = good + neutral + bad;
+  const positivePercent = Number(((good / total) * 100).toFixed(2));
   const options = Object.keys(state);
 
   return (
@@ -26,9 +27,9 @@ const App = () => {
       <Section title="Statistics">
         {total ? (
           <Statistics
-            good={state.good}
-            neutral={state.neutral}
-            bad={state.bad}
+            good={good}
+            neutral={neutral}
+            bad={bad}
             total={total}
             positivePercent={positivePercent}
           />
