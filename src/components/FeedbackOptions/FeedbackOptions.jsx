@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import styles from './feedback-options.module.css';
 
 const FeedbackOptions = ({ options, onButtonClick }) => {
-  const elements = options.map(name => {
+  const elements = options.map(option => {
     return (
-      <li key={name}>
+      <li key={option}>
         <button
-          onClick={() => onButtonClick(name)}
+          onClick={() => onButtonClick(option)}
           type="button"
-          name={name}
+          name={option}
           className={styles.button}
         >
-          {name}
+          {option}
         </button>
       </li>
     );
